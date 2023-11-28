@@ -7,3 +7,4 @@ export { default as ReportIcon } from './report-icon';
 export { default as ChatIcon } from './chat-icon';
 export { default as BudgetIcon } from './budget-icon';
 export { default as AvatarIcon } from './avatar-icon';
+export { default as ThreedotsMenuIcon } from './threedots-icon';

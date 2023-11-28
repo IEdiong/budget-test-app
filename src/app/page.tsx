@@ -33,6 +33,7 @@ export default function Home() {
             <Heading>₦120,000</Heading>
           </Flex>
         </Box>
+
         <Flex align="center" justify="center" mt="140px" pos="relative">
           <BudgetChart />
           <Text
@@ -46,6 +47,7 @@ export default function Home() {
             49%
           </Text>
         </Flex>
+
         <VStack gap="5px" pb="33px">
           <Text textAlign="center" mt="21px">
             Amount spent so far
