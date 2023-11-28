@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import { Providers } from './providers';
+import NavBar from '@/components/navbar';
 
 const circularStd = localFont({
   src: [
@@ -41,7 +42,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={circularStd.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavBar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

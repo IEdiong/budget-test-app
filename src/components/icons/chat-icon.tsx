@@ -7,7 +7,7 @@ const ChatIcon = (props: IconProps) => (
     width="47"
     height="47"
     viewBox="0 0 47 47"
-    fill="currentColor"
+    fill="none"
     {...props}
   >
     <g opacity="0.6">

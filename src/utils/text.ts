@@ -10,7 +10,15 @@ const Text = defineStyleConfig({
     letterSpacing: '-0.07px',
   },
   // Styles for the visual style variations
-  variants: {},
+  variants: {
+    menuButton: {
+      fontSize: 'xs',
+      lineHeight: 'normal',
+      letterSpacing: '1',
+      textTransform: 'capitalize',
+      color: '#C1C4CD',
+    },
+  },
   // The default `size` or `variant` values
   defaultProps: {},
 });
