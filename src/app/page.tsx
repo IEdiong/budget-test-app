@@ -1,3 +1,4 @@
+import BudgetChart from '@/components/budget-chart';
 import { NairaIcon } from '@/components/icons';
 import {
   Box,
@@ -6,6 +7,7 @@ import {
   HStack,
   Heading,
   Text,
+  VStack,
 } from '@/utils/chakra-components';
 
 export default function Home() {
@@ -30,6 +32,30 @@ export default function Home() {
           <Heading>₦120,000</Heading>
         </Flex>
       </Box>
+      <Flex align="center" justify="center" mt="30px" pos="relative">
+        <BudgetChart />
+        <Text
+          pos="absolute"
+          left="50%"
+          transform="translate(-50%)"
+          fontSize="4xl"
+          fontWeight="bold"
+          color="bdg.primary.100"
+        >
+          49%
+        </Text>
+      </Flex>
+      <VStack gap="5px">
+        <Text textAlign="center" mt="21px">
+          Amount spent so far
+        </Text>
+        <Text fontSize="16px" color="bdg.primary.100">
+          ₦50,000
+          <Text as="span" color="bdg.primary.50">
+            /₦120,000
+          </Text>
+        </Text>
+      </VStack>
     </Container>
   );
 }
