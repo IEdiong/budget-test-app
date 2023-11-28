@@ -6,6 +6,12 @@ import {
   Flex,
   HStack,
   Heading,
+  Tab,
+  TabIndicator,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
   Text,
   VStack,
 } from '@/utils/chakra-components';
@@ -34,19 +40,49 @@ export default function Home() {
           </Flex>
         </Box>
 
-        <Flex align="center" justify="center" mt="140px" pos="relative">
-          <BudgetChart />
-          <Text
-            pos="absolute"
-            left="50%"
-            transform="translate(-50%)"
-            fontSize="4xl"
-            fontWeight="bold"
-            color="bdg.primary.100"
-          >
-            49%
-          </Text>
-        </Flex>
+        <Tabs defaultIndex={1} position="relative" variant="unstyled" mt="30px">
+          <TabList color="#707480" fontWeight="medium">
+            <Tab pl="0">Last Month</Tab>
+            <Tab pl="0">This Month</Tab>
+          </TabList>
+          <TabIndicator
+            mt="-1.5px"
+            height="2px"
+            bg="bdg.primary.100"
+            borderRadius="1px"
+            w="30px"
+          />
+          <TabPanels>
+            <TabPanel>
+              <Flex
+                align="center"
+                justify="center"
+                mt="33px"
+                pos="relative"
+                w="full"
+                h="150px"
+                textAlign="center"
+              >
+                Nothing here for now...
+              </Flex>
+            </TabPanel>
+            <TabPanel>
+              <Flex align="center" justify="center" mt="33px" pos="relative">
+                <BudgetChart />
+                <Text
+                  pos="absolute"
+                  left="50%"
+                  transform="translate(-50%)"
+                  fontSize="4xl"
+                  fontWeight="bold"
+                  color="bdg.primary.100"
+                >
+                  49%
+                </Text>
+              </Flex>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
 
         <VStack gap="5px" pb="33px">
           <Text textAlign="center" mt="21px">
