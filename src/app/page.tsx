@@ -1,7 +1,13 @@
 import BudgetChart from '@/components/budget-chart';
-import { FoodnDrinkIcon, NairaIcon, SavingsIcon } from '@/components/icons';
+import {
+  FoodnDrinkIcon,
+  NairaIcon,
+  SavingsIcon,
+  ThreedotsMenuIcon,
+} from '@/components/icons';
 import {
   Box,
+  Button,
   Container,
   Flex,
   HStack,
@@ -44,13 +50,22 @@ export default function Home() {
           <TabList color="#707480" fontWeight="medium">
             <Tab pl="0">Last Month</Tab>
             <Tab pl="0">This Month</Tab>
+            <Button
+              w="30px"
+              h="16px"
+              alignSelf="center"
+              ml="auto"
+              bg="transparent"
+            >
+              <ThreedotsMenuIcon w="30px" h="16px" />
+            </Button>
           </TabList>
           <TabIndicator
             mt="-1.5px"
             height="2px"
             bg="bdg.primary.100"
             borderRadius="1px"
-            w="30px"
+            w="30px !important"
           />
           <TabPanels>
             <TabPanel>
@@ -60,10 +75,10 @@ export default function Home() {
                 mt="33px"
                 pos="relative"
                 w="full"
-                h="150px"
+                h="250px"
                 textAlign="center"
               >
-                Nothing here for now...
+                No record for last month
               </Flex>
             </TabPanel>
             <TabPanel>
@@ -80,21 +95,21 @@ export default function Home() {
                   49%
                 </Text>
               </Flex>
+
+              <VStack gap="5px" pb="33px">
+                <Text textAlign="center" mt="21px">
+                  Amount spent so far
+                </Text>
+                <Text fontSize="16px" color="bdg.primary.100">
+                  ₦50,000
+                  <Text as="span" color="bdg.primary.50">
+                    /₦120,000
+                  </Text>
+                </Text>
+              </VStack>
             </TabPanel>
           </TabPanels>
         </Tabs>
-
-        <VStack gap="5px" pb="33px">
-          <Text textAlign="center" mt="21px">
-            Amount spent so far
-          </Text>
-          <Text fontSize="16px" color="bdg.primary.100">
-            ₦50,000
-            <Text as="span" color="bdg.primary.50">
-              /₦120,000
-            </Text>
-          </Text>
-        </VStack>
 
         <Heading variant="h3">Category Breakdown</Heading>
       </Container>
