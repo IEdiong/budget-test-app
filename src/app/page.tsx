@@ -33,7 +33,7 @@ export default function Home() {
             <Heading>₦120,000</Heading>
           </Flex>
         </Box>
-        <Flex align="center" justify="center" mt="30px" pos="relative">
+        <Flex align="center" justify="center" mt="94px" pos="relative">
           <BudgetChart />
           <Text
             pos="absolute"
